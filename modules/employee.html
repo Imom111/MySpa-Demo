@@ -1,0 +1,210 @@
+<div class="col-10 mx-auto py-5">
+  <div class="row pb-3">
+    <form class="col-8">
+      <div class="div_buscar d-flex p-1 justify-content-between container">
+        <div class="col-3 px-2 d-flex align-items-center justify-content-center contenedorSelectorBuscarPor">
+          <select class="form-select-sm" name="selcTipoDeBusqueda" id="selcTipoDeBusqueda"
+            onchange="habilitarCampoBusqueda(); limpiarFormularioBuscar();">
+            <option selected disabled>Buscar por...</option>
+            <option value="id">ID</option>
+            <option value="numeroU">Número único</option>
+            <option value="nombre">Nombre</option>
+            <option value="apellidoP">Apellido paterno</option>
+            <option value="apellidoM">Apellido materno</option>
+            <option value="genero">Género</option>
+            <option value="correo">Correo</option>
+            <option value="telefono">Teléfono</option>
+            <option value="rfc">RFC</option>
+            <option value="domicilio">Domicilio</option>
+            <option value="usuario">Usuario</option>
+            <option value="rol">Rol</option>
+            <option value="estatus">Estatus</option>
+          </select>
+        </div>
+        <div class="col-8" hidden
+          id="seccionIdBusqueda">
+          <input class="col-12" type="number" name="txtBusquedaId" id="txtBusquedaId"
+            placeholder="Escribe un ID..." min="0" pattern="^[0-9]+" step="1"
+            onkeypress="validarPositivo();" onkeyup="habilitarBotonBusqueda();">
+        </div>
+        <div class="col-8" hidden
+          id="seccionNumeroUBusqueda">
+          <input class="col-12" type="text" name="txtNumeroUBusqueda" id="txtNumeroUBusqueda"
+            placeholder="Número único de cliente..." onkeyup="habilitarBotonBusqueda();">
+        </div>
+        <div class="col-8" hidden
+          id="seccionNombreBusqueda">
+          <input class="col-12" type="text" name="txtNombreBusqueda" id="txtNombreBusqueda"
+            placeholder="Nombre del cliente..." onkeyup="habilitarBotonBusqueda();">
+        </div>
+        <div class="col-8" hidden
+          id="seccionApellidoPBusqueda">
+          <input class="col-12" type="text" name="txtApellidoPBusqueda" id="txtApellidoPBusqueda"
+            placeholder="Apellido paterno del cliente..." onkeyup="habilitarBotonBusqueda();">
+        </div>
+        <div class="col-8" hidden
+          id="seccionApellidoMBusqueda">
+          <input class="col-12" type="text" name="txtApellidoMBusqueda" id="txtApellidoMBusqueda"
+            placeholder="Apellido materno del cliente..." onkeyup="habilitarBotonBusqueda();">
+        </div>
+        <div class="col-8" hidden
+          id="seccionGeneroBusqueda">
+          <select style="max-width: 70%;" name="txtGeneroBusqueda" id="txtGeneroBusqueda"
+            class="form-select form-select-sm" aria-label=".form-select"
+            onchange="habilitarBotonBusqueda();">
+            <option value="">Indica el género</option>
+            <option value="O">Prefiero no decir</option>
+            <option value="M">Hombre</option>
+            <option value="F">Mujer</option>
+          </select>
+        </div>
+        <div class="col-8" hidden
+          id="seccionCorreoBusqueda">
+          <input class="col-12" type="text" name="txtCorreoBusqueda" id="txtCorreoBusqueda"
+            placeholder="Correo electrónico del cliente" onkeyup="habilitarBotonBusqueda();">
+        </div>
+        <div class="col-8" hidden
+          id="seccionTelefonoBusqueda">
+          <input class="col-12" type="number" name="txtTelefonoBusqueda" id="txtTelefonoBusqueda"
+            placeholder="Teléfono del cliente..." maxlength="10" onkeyup="habilitarBotonBusqueda();">
+        </div>
+        <div class="col-8" hidden
+          id="seccionRfcBusqueda">
+          <input class="col-12" type="text" name="txtRfcBusqueda" id="txtRfcBusqueda"
+            placeholder="RFC del cliente..." onkeyup="habilitarBotonBusqueda();">
+        </div>
+        <div class="col-8" hidden
+          id="seccionDomicilioBusqueda">
+          <input class="col-12" type="text" name="txtDomicilioBusqueda" id="txtDomicilioBusqueda"
+            placeholder="Domicilio del cliente..." onkeyup="habilitarBotonBusqueda();">
+        </div>
+        <div class="col-8" hidden
+          id="seccionUsuarioBusqueda">
+          <input class="col-12" type="text" name="txtUsuarioBusqueda" id="txtUsuarioBusqueda"
+            placeholder="Nombre de usuario del cliente..." onkeyup="habilitarBotonBusqueda();">
+        </div>
+        <div class="col-8" hidden
+          id="seccionRolBusqueda">
+          <input class="col-12" type="text" name="txtRolBusqueda" id="txtRolBusqueda"
+            placeholder="Rol del usuario..." onkeyup="habilitarBotonBusqueda();">
+        </div>
+        <div class="col-8" hidden
+          id="seccionEstatusBusqueda">
+          <div class="col-4">
+            Activo <input type="radio" id="txtBusquedaEstatus1" name="txtBusquedaEstatus" value=1
+              onclick="habilitarBotonBusqueda();">
+          </div>
+          <div class="col-4">
+            Inactivo <input type="radio" id="txtBusquedaEstatus2" name="txtBusquedaEstatus" value=2
+              onclick="habilitarBotonBusqueda();">
+          </div>
+        </div>
+        <button id="btnBuscar" type="button" class="col-1 d-flex align-items-center justify-content-end"
+          onclick="mostrarBusqueda(); resultadoBusquedaClientes();" disabled>
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+    </form>
+    <button type="button" class="btn col-1 btn_add" onclick="cargarModuloAgregarCliente();"><i class="fa-solid fa-square-plus"></i></button>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 table-responsive" id="datosTablaBusquedaClientes"
+        style="display: none;">
+        <div class="row d-flex align-items-center justify-content-between col-10 my-1 mb-4">
+          <div class="col-10 d-flex justify-content-center">
+            <h4 class="text-center">Resultados de búsqueda:</h4>
+          </div>
+          <div class="col-1 d-flex align-items-center rounded contenedor_ocultarBusqueda"
+            id="btnOcultarBusqueda">
+            <button type="button" onclick="ocultarBusqueda(); limpiarFormularioBuscar();">
+              <img src="img/tacha.svg" alt="Cancelar" class="icono img-fluid">
+            </button>
+          </div>
+        </div>
+        <table class="col-12">
+          <thead>
+            <tr class="titulo_tabla">
+              <td>
+                Clave
+              </td>
+              <td>
+                Número único
+              </td>
+              <td>
+                Nombre
+              </td>
+              <td>
+                Apellido pat.
+              </td>
+              <td>
+                Apellido mat.
+              </td>
+              <td>
+                Correo
+              </td>
+              <td>
+                Teléfono
+              </td>
+              <td>
+                Estatus
+              </td>
+              <td>
+                Elim.
+              </td>
+              <td>
+                Edit.
+              </td>
+            </tr>
+          </thead>
+          <tbody id="datosBusquedaTablaCliente">
+            
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-12 table-responsive" id="tablaClientes">
+        <table class="col-12">
+          <thead>
+            <tr class="titulo_tabla">
+              <td>
+                Clave
+              </td>
+              <td>
+                Número único
+              </td>
+              <td>
+                Nombre
+              </td>
+              <td>
+                Apellido pat.
+              </td>
+              <td>
+                Apellido mat.
+              </td>
+              <td>
+                Correo
+              </td>
+              <td>
+                Teléfono
+              </td>
+              <td>
+                Estatus
+              </td>
+              <td>
+                Elim.
+              </td>
+              <td>
+                Edit.
+              </td>
+            </tr>
+          </thead>
+          <tbody id="datosTablaClientes">
+            <tr><td colspan='10' class='registro text-center'><h4 class='py-4'>No records found</h4></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <section class="col-md-12" id="seccionGestionarCliente" style="display: none;">
+      </section>
+    </div>
+  </div>
+</div>

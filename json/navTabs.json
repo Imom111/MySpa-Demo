@@ -1,0 +1,38 @@
+[
+  {
+    "id" : "a_nav_employees",
+    "value" : "employee"
+  },
+  {
+    "id" : "a_nav_customers",
+    "value" : "customer"
+  },
+  {
+    "id" : "a_nav_halls",
+    "value" : "hall"
+  },
+  {
+    "id" : "a_nav_products",
+    "value" : "product"
+  },
+  {
+    "id" : "a_nav_branch_offices",
+    "value" : "branch_office"
+  },
+  {
+    "id" : "a_nav_treatments",
+    "value" : "treatment"
+  },
+  {
+    "id" : "a_nav_schedules",
+    "value" : "schedule"
+  },
+  {
+    "id" : "a_nav_services",
+    "value" : "service"
+  },
+  {
+    "id" : "a_nav_reservations",
+    "value" : "reservation"
+  }
+]
