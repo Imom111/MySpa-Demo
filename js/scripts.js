@@ -1,23 +1,26 @@
 
-import { select_general_module } from "./components/nav_modules.js";
+import { select_general_module } from "../components/nav_modules.js";
 
 
-function change_a_nav(i) {
-  let previous_active = $('.active_management');
-  for (let j = 0; j < previous_active.length; j++) {
-    previous_active.eq(j).removeClass('active_management');
-  }
-  $('#' + arr_ids_nav[i].id).addClass('active_management');
-  select_general_module(i);
+function change_a_nav(id_nav) {
+  document.querySelectorAll('.active_management')[0].classList.remove("active_management");
+  document.getElementById(id_nav).classList.add('active_management');
+  select_general_module(id_nav);
 }
 
 
 function init (){
-  select_general_module(0);
+  select_general_module("a_nav_employees");
   // cargarUsuarioGestion(); actualizarListadoSalas();
 }
 
 
-window.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('click', (evt) => {
+  if (evt.target.matches('.nav_management a'))
+    change_a_nav(evt.target.id);
+});
+
+
+window.addEventListener('DOMContentLoaded', () => {
   init();
 });

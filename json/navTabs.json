@@ -1,38 +1,47 @@
 [
   {
     "id" : "a_nav_employees",
-    "value" : "employee"
+    "value" : "employee",
+    "path_html" : "employee.html"
   },
   {
     "id" : "a_nav_customers",
-    "value" : "customer"
+    "value" : "customer",
+    "path_html" : "customer.html"
   },
   {
     "id" : "a_nav_halls",
-    "value" : "hall"
+    "value" : "hall",
+    "path_html" : "hall.html"
   },
   {
     "id" : "a_nav_products",
-    "value" : "product"
+    "value" : "product",
+    "path_html" : "product.html"
   },
   {
     "id" : "a_nav_branch_offices",
-    "value" : "branch_office"
+    "value" : "branch_office",
+    "path_html" : "branch_office.html"
   },
   {
     "id" : "a_nav_treatments",
-    "value" : "treatment"
+    "value" : "treatment",
+    "path_html" : "treatment.html"
   },
   {
     "id" : "a_nav_schedules",
-    "value" : "schedule"
+    "value" : "schedule",
+    "path_html" : "schedule.html"
   },
   {
     "id" : "a_nav_services",
-    "value" : "service"
+    "value" : "service",
+    "path_html" : "service.html"
   },
   {
     "id" : "a_nav_reservations",
-    "value" : "reservation"
+    "value" : "reservation",
+    "path_html" : "reservation.html"
   }
 ]
