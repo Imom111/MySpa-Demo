@@ -49,7 +49,7 @@
     </nav>
   </header>
   <section class="col-12 mx-auto campo_gestiones">
-    <h1 class="title_management text-center">Salas</h1>
+    <h1 class="title_management text-center">Empleados</h1>
     <nav class="navbar col-8 mx-auto px-3 nav_management d-flex justify-content-center">
       <a id="a_nav_employees" class="active_management">Empleados</a>
       <a id="a_nav_customers">Clientes</a>
@@ -63,148 +63,45 @@
       </div>
     </nav>
     <div id="div_main_management">
-
-    </div>
-    <!--
-    <div class="col-10">
-      <div class="row ">
-        <form class="col-7">
-          <div class="div_buscar d-flex p-1 justify-content-between container">
-            <div class="col-3 px-2 d-flex align-items-center justify-content-center contenedorSelectorBuscarPor">
-              <select class="form-select-sm" name="selcTipoDeBusqueda" id="selcTipoDeBusqueda"
-                onchange="habilitarCampoBusqueda(); limpiarFormularioBuscar();">
-                <option value="" selected disabled>Buscar por...</option>
-                <option value="id">ID</option>
-                <option value="nombre">Nombre</option>
-                <option value="sucursal">Sucursal</option>
-                <option value="descripcion">Descripción</option>
-                <option value="estatus">Estatus</option>
-              </select>
-            </div>
-            <div class="col-8 d-flex align-items-center justify-content-center tipoBusquedaOculto"
-              id="seccionIdBusqueda">
-              <input class="col-12" type="number" name="txtBusquedaId" id="txtBusquedaId" placeholder="Escribe un ID..."
-                min="0" pattern="^[0-9]+" step="1" onkeypress="validarPositivo();" onkeyup="habilitarBotonBusqueda();">
-            </div>
-            <div class="col-8 d-flex align-items-center justify-content-center tipoBusquedaOculto"
-              id="seccionNombreBusqueda">
-              <input class="col-12" type="text" name="txtNombreBusqueda" id="txtNombreBusqueda"
-                placeholder="Nombre del tratamiento..." onkeyup="habilitarBotonBusqueda();">
-            </div>
-            <div class="col-8 d-flex align-items-center justify-content-center tipoBusquedaOculto"
-              id="seccionSucursalBusqueda">
-              <select style="max-width: 70%;" id="txtSucursalBusqueda" name="txtSucursalBusqueda"
-                class="form-select form-select-sm" onchange="habilitarBotonBusqueda();">
-              </select>
-            </div>
-            <div class="col-8 d-flex align-items-center justify-content-center tipoBusquedaOculto"
-              id="seccionDescripcionBusqueda">
-              <input class="col-12" type="text" name="txtDescripcionBusqueda" id="txtDescripcionBusqueda"
-                placeholder="Descripción la sala..." onkeyup="habilitarBotonBusqueda();">
-            </div>
-            <div class="col-8 d-flex align-items-center justify-content-center tipoBusquedaOculto"
-              id="seccionEstatusBusqueda">
-              <div class="col-4">
-                Activo <input type="radio" id="txtBusquedaEstatus1" name="txtBusquedaEstatus" value=1
-                  onclick="habilitarBotonBusqueda();">
-              </div>
-              <div class="col-4">
-                Inactivo <input type="radio" id="txtBusquedaEstatus2" name="txtBusquedaEstatus" value=2
-                  onclick="habilitarBotonBusqueda();">
-              </div>
-            </div>
-            <button type="button" id="btnBuscar" class="col-1 d-flex align-items-center justify-content-end"
-              onclick="mostrarBusqueda(); resultadoBusquedaSalas();" disabled>
-              <img src="./img/buscar.svg" alt="Buscar" class="icono col-2 img-fluid">
-            </button>
+      <div class="col-10 mx-auto py-4">
+        <form class="row py-2 px-3" id="frmEmployee">
+          <div class="col-lg-4 col-md-2 col-sm-12 my-auto">
+            <select class="form-select" id="select_search_by" aria-label="Selecciona un tipo de búsqueda">
+              
+            </select>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 my-auto" id="div_input_search">
+            
+          </div>
+          <div class="col-lg-1 col-md-2 col-sm-12 my-auto">
+            <button type="button" class="btn btn-primary col-12" id="btn_search" disabled><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+          <div class="col-lg-1 col-md-2 col-sm-12 my-auto">
+            <button type="button" class="btn btn-success col-12 btn_add" id="btn_add"><i class="fa-solid fa-square-plus"></i></button>
           </div>
         </form>
-        <div class="col-1 div_agregar d-flex align-items-center rounded">
-          <button onclick="cargarModuloAgregarSala();">
-            <img src="./img/agregar.svg" alt="Agregar nueva reservación" class="icono img-fluid">
-          </button>
-        </div>
-      </div>
-      <br>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 table-responsive contenedor_tabla_gestiones" id="datosTablaBusquedaSalas"
-            style="display: none;">
-            <div class="row d-flex align-items-center justify-content-between col-10 my-1 mb-4">
-              <div class="col-10 d-flex justify-content-center">
-                <h4 class="text-center">Resultados de búsqueda:</h4>
-              </div>
-              <div class="col-1 d-flex align-items-center rounded contenedor_ocultarBusqueda" id="btnOcultarBusqueda">
-                <button type="button" onclick="ocultarBusqueda(); limpiarFormularioBuscar();">
-                  <img src="img/tacha.svg" alt="Cancelar" class="icono img-fluid">
-                </button>
-              </div>
+        <div class="container">
+          <div class="row py-2" id="div_close_search" hidden>
+            <div class="col-10">
+              <h4 class="text-center">Resultados de búsqueda:</h4>
             </div>
-            <table class="col-12">
-              <thead>
-                <tr class="titulo_tabla">
-                  <td>
-                    Clave
-                  </td>
-                  <td>
-                    Nombre
-                  </td>
-                  <td>
-                    Sucursal
-                  </td>
-                  <td>
-                    Descripción
-                  </td>
-                  <td>
-                    Estatus
-                  </td>
-                  <td>
-                    Elim.
-                  </td>
-                  <td>
-                    Edit.
-                  </td>
-                </tr>
-              </thead>
-              <tbody id="datosBusquedaTablaSalas">
-              </tbody>
-            </table>
+            <a type="button" id="btn_close_search" class="btn btn-danger col-1">x</a>
           </div>
-          <div class="col-md-12 table-responsive contenedor_tabla_gestiones" id="tablaSalas">
-            <table class="col-12">
-              <thead>
-                <tr class="titulo_tabla">
-                  <td>
-                    Clave
-                  </td>
-                  <td>
-                    Nombre
-                  </td>
-                  <td>
-                    Sucursal
-                  </td>
-                  <td>
-                    Descripción
-                  </td>
-                  <td>
-                    Estatus
-                  </td>
-                  <td>
-                    Elim.
-                  </td>
-                  <td>
-                    Edit.
-                  </td>
-                </tr>
-              </thead>
-              <tbody id="datosTablaSalas">
-              </tbody>
-            </table>
+          <div class="row">
+            <div class="col-12 table-responsive" id="table_records">
+              <table class="table">
+                <thead id="head_table">
+                </thead>
+                <tbody id="records">
+                </tbody>
+              </table>
+            </div>
+            <section class="col-12" id="management_section" style="display: none;">
+            </section>
           </div>
-          <section class="col-md-4" id="seccionGestionarSala" style="display: none;"></section>
         </div>
       </div>
-    </div>-->
+    </div>
   </section>
   <footer>
     <div>
@@ -213,12 +110,11 @@
       <p class="my-1"><strong>MySPA - @Imom111</strong></p>
     </div>
   </footer>
-  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
-    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
     crossorigin="anonymous"></script>
   <script src="js/scripts.js" type="module"></script>
+  <script src="js/validate.js" type="module"></script>
 </body>
 
 </html>

@@ -1,0 +1,197 @@
+[
+  {
+    "id" : "a_nav_employees",
+    "value" : "employee",
+    "json_file_name" : "employees.json",
+    "path_html" : "employee.html",
+    "attributes" : [
+      {
+        "show_name" : "Id",
+        "real_name" : "id",
+        "type" : "number",
+        "placeholder" : "Escribe un id",
+        "positive" : true,
+        "greater_than_0" : true,
+        "integer" : true,
+        "search" : false,
+        "show_in_table" : false
+      },
+      {
+        "show_name" : "Identificador",
+        "real_name" : "identificador",
+        "name" : "Número único",
+        "type" : "text",
+        "placeholder" : "Escribe un identificador",
+        "search" : true,
+        "show_in_table" : true
+      },
+      {
+        "show_name" : "Nombre",
+        "real_name" : "name",
+        "type" : "text",
+        "placeholder" : "Escribe un nombre",
+        "search" : true,
+        "show_in_table" : true
+      },
+      {
+        "show_name" : "Apellido paterno",
+        "real_name" : "father_last_name",
+        "type" : "text",
+        "placeholder" : "Escribe un apellido paterno",
+        "search" : true,
+        "show_in_table" : true
+      },
+      {
+        "show_name" : "Apellido materno",
+        "real_name" : "mother_last_name",
+        "type" : "text",
+        "placeholder" : "Escribe un apellido materno",
+        "search" : true,
+        "show_in_table" : true
+      },
+      {
+        "show_name" : "Género",
+        "real_name" : "gender",
+        "type" : "select",
+        "options" : [
+          {
+            "name" : "Hombre",
+            "value" : "H"
+          },
+          {
+            "name" : "Mujer",
+            "value" : "M"
+          },
+          {
+            "name" : "Otro",
+            "value" : "O"
+          }
+        ],
+        "placeholder" : "Selecciona una opción...",
+        "search" : true,
+        "show_in_table" : false
+      },
+      {
+        "show_name" : "Correo electrónico",
+        "real_name" : "email",
+        "type" : "email",
+        "placeholder" : "Escribe un correo electrónico",
+        "search" : true,
+        "show_in_table" : true
+      },
+      {
+        "show_name" : "Teléfono",
+        "real_name" : "tel",
+        "type" : "tel",
+        "placeholder" : "Escribe un teléfono",
+        "search" : true,
+        "show_in_table" : true
+      },
+      {
+        "show_name" : "RFC",
+        "real_name" : "rfc",
+        "type" : "text",
+        "placeholder" : "Escribe un RFC",
+        "search" : true,
+        "show_in_table" : false
+      },
+      {
+        "show_name" : "Domicilio",
+        "real_name" : "address",
+        "type" : "text",
+        "placeholder" : "Escribe un domicilio",
+        "search" : true,
+        "show_in_table" : false
+      },
+      {
+        "show_name" : "Rol",
+        "real_name" : "role",
+        "type" : "text",
+        "placeholder" : "Escribe un rol",
+        "search" : true,
+        "show_in_table" : false
+      },
+      {
+        "show_name" : "Estatus",
+        "real_name" : "status",
+        "name" : "Estatus",
+        "type" : "radio",
+        "options" : [
+          {
+            "name" : "Activo",
+            "value" : true
+          },
+          {
+            "name" : "Inactivo",
+            "value" : false
+          }
+        ],
+        "search" : true,
+        "show_in_table" : true
+      },
+      {
+        "show_name" : "Usuario",
+        "real_name" : "user",
+        "type" : "text",
+        "placeholder" : "Escribe un usuario",
+        "search" : true,
+        "show_in_table" : false
+      },
+      {
+        "show_name" : "Contraseña",
+        "real_name" : "password",
+        "type" : "text",
+        "search" : false,
+        "show_in_table" : false
+      }
+    ]
+  },
+  {
+    "id" : "a_nav_customers",
+    "value" : "customer",
+    "json_file_name" : "customers.json",
+    "path_html" : "customer.html"
+  },
+  {
+    "id" : "a_nav_halls",
+    "value" : "hall",
+    "json_file_name" : "halls.json",
+    "path_html" : "hall.html"
+  },
+  {
+    "id" : "a_nav_products",
+    "value" : "product",
+    "json_file_name" : "products.json",
+    "path_html" : "product.html"
+  },
+  {
+    "id" : "a_nav_branch_offices",
+    "value" : "branch_office",
+    "json_file_name" : "offices.json",
+    "path_html" : "branch_office.html"
+  },
+  {
+    "id" : "a_nav_treatments",
+    "value" : "treatment",
+    "json_file_name" : "treatments.json",
+    "path_html" : "treatment.html"
+  },
+  {
+    "id" : "a_nav_schedules",
+    "value" : "schedule",
+    "json_file_name" : "schedules.json",
+    "path_html" : "schedule.html"
+  },
+  {
+    "id" : "a_nav_services",
+    "value" : "service",
+    "json_file_name" : "services.json",
+    "path_html" : "service.html"
+  },
+  {
+    "id" : "a_nav_reservations",
+    "value" : "reservation",
+    "json_file_name" : "reservations.json",
+    "path_html" : "reservation.html"
+  }
+]
