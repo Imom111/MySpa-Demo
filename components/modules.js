@@ -1,7 +1,7 @@
 
 export async function select_general_module(id_nav) {
   try {
-    await fetch('./../../json/modules.json')
+    await fetch('./../json/modules.json')
       .then(function (response) {
         return response.json();
       })
