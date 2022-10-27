@@ -1,18 +1,50 @@
 [
-    {
-      "id" : 1,
-      "identificador" : "SPA220001",
-      "name" : "Iván",
-      "father_last_name" : "Ornelas",
-      "mother_last_name" : "Meza",
-      "gender" : "H",
-      "email" : "ivan@gmail.com",
-      "tel" : "4771231212",
-      "rfc" : "101010ABCABCO",
-      "address" : "León, Guanajuato",
-      "role" : "Administrador",
-      "status" : true,
-      "user" : "Ivan",
-      "password" : "ivan123"
-    }
+  {
+    "id" : 1,
+    "identificador" : "SPA220001",
+    "name" : "Iván",
+    "father_last_name" : "Ornelas",
+    "mother_last_name" : "Meza",
+    "gender" : "H",
+    "email" : "ivan@gmail.com",
+    "tel" : "4771231212",
+    "rfc" : "101010ABCABCO",
+    "address" : "León, Guanajuato",
+    "role" : 1,
+    "status" : true,
+    "user" : "Ivan",
+    "password" : "ivan123"
+  },
+  {
+    "id" : 2,
+    "identificador" : "SPA220002",
+    "name" : "Andrea",
+    "father_last_name" : "Torres",
+    "mother_last_name" : "Mora",
+    "gender" : "M",
+    "email" : "andrea@gmail.com",
+    "tel" : "47798127744",
+    "rfc" : "981277TITAEBI",
+    "address" : "Sialo, Guanajuato",
+    "role" : 2,
+    "status" : true,
+    "user" : "Andrea",
+    "password" : "andrea_12"
+  },
+  {
+    "id" : 3,
+    "identificador" : "SPA220003",
+    "name" : "María Axel",
+    "father_last_name" : "Muños",
+    "mother_last_name" : "Mora",
+    "gender" : "O",
+    "email" : "maria_axel@gmail.com",
+    "tel" : "47791824422",
+    "rfc" : "918244OIOICNV",
+    "address" : "México, México",
+    "role" : 3,
+    "status" : true,
+    "user" : "Maria",
+    "password" : "maria_92"
+  }
 ]

@@ -80,9 +80,9 @@ async function load_records_table(json_file_name){
       .then((arr_records) => {
         const body_table = document.getElementById("records");
         let content_body_html = '';
-        content_body_html += '<tr>';
         for (let i = 0; i < arr_records.length; i++) {
           content_body_html += `
+          </th>
             <th scope="row">${arr_records[i].identificador}</th>
             <td>${arr_records[i].name}</td>
             <td>${arr_records[i].father_last_name}</td>
@@ -91,9 +91,9 @@ async function load_records_table(json_file_name){
             <td>${arr_records[i].tel}</td>
             <td><a type="button" class="btn btn-danger delete_record" data-id="${arr_records[i].id}">Delete</a></td>
             <td><a type="button" class="btn btn-info edit_record" data-id="${arr_records[i].id}">Edit</a></td>
+          </tr>
           `;
         }
-        content_body_html += '</tr>';
         body_table.innerHTML = content_body_html;
     });
   } catch (err) {
