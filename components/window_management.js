@@ -1,7 +1,7 @@
 
 export async function show_window(id_nav, status_edit) {
   try {
-    await fetch('../json/modules.json')
+    await fetch('./json/modules.json')
       .then(function (response) {
         return response.json();
       })
