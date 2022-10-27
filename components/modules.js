@@ -73,7 +73,7 @@ function load_table_module(module_selected) {
 
 async function load_records_table(json_file_name){
   try {
-    await fetch('./../../json/' + json_file_name)
+    await fetch('./json/' + json_file_name)
       .then(function (response) {
         return response.json();
       })
