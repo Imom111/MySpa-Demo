@@ -104,7 +104,7 @@ async function load_records_table(json_file_name){
 
 export async function change_input_search(id_module_selected, value_option) {
   try {
-    const arr_module = await fetch('./../../json/modules.json')
+    const arr_module = await fetch('./../json/modules.json')
       .then(function (response) {
         return response.json();
       });
